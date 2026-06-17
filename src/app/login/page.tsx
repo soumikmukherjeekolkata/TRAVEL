@@ -23,7 +23,7 @@ export default function LoginPage() {
         <div className="bg-background/95 backdrop-blur-[12px] p-xl md:p-lg rounded-xl shadow-[0_4px_24px_rgba(27,67,50,0.15)] border border-secondary/20 flex flex-col items-center text-center">
           <div className="mb-lg">
             <img
-              alt="Guardians Holiday Logo"
+              alt="Guardian Holidays Logo"
               className="h-24 w-auto object-contain"
               src={IMAGES.LOGO}
             />

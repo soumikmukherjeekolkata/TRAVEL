@@ -235,7 +235,7 @@ export default function HomePage() {
       <section className="py-xl max-w-container-max mx-auto px-gutter">
         <div className="text-center mb-lg">
           <span className="font-label-caps text-label-caps text-secondary uppercase mb-xs block">
-            Why Guardians Holiday
+            Why Guardian Holidays
           </span>
           <h2 className="font-h2-desktop text-h2-desktop text-primary">
             Built on Trust, Driven by Excellence

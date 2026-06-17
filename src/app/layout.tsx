@@ -17,7 +17,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Guardians Holiday | Your Trusted B2B Travel Partner",
+  title: "Guardian Holidays | Your Trusted B2B Travel Partner",
   description:
     "Premier full-service DMC and travel solutions provider. Flights, hotels, transport, visa assistance, forex, and curated itineraries across India and beyond.",
 };

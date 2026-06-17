@@ -1,5 +1,5 @@
 export const COMPANY = {
-  NAME: "Guardians Holiday",
+  NAME: "Guardian Holidays",
   TAGLINE: "Your Trusted B2B Travel Partner",
   EMAIL: "guardiansholiday@gmail.com",
   PHONE: "+91 82299 51289",
@@ -10,7 +10,7 @@ export const COMPANY = {
 } as const;
 
 export const IMAGES = {
-  LOGO: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZhh7yha_B2mui0UxUYuay0Ok-qA5jZ6USX2Jo6d6Hn-FurgdmuwQLCxcNi0LThG3vAZse4TMFy8p5rdFSOHsek8KExBMMX2J663Ayw0rqT8bfXkPazZHsq66ltFwBZhwndLn32njsApmuzicfHvZF2_b--RbbrYmY5u3kBot6Cy04HDx-KQ2tEfjIpDB_9JEID2qCnHtEvFmQq2hEAm0JRfEX0f9tZ8LD6PjCxZbwHA80XIQjntDZadrdSjKMQm5OzXzwb1gjy1F2",
+  LOGO: "/Logo.jpeg",
   HERO_BG:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuCSQ1mo2yWR459ZjNxP8kxm_9z7hhCNwXT1XJCbqmEudtfnzWX10lC6GnjS7RVnojCLjsHOH7lccwk2vH_dHVSYzRsl0CQQ79v1aXaEQ019C-_zznppBzOvdc7TXwjKdOtRaMIwrTy7JO0E_ySKB1gdpcPXVI9qRv4Pevv-Ar0wGynf5wkl7vhdBrZbLRiRHhIZ7vRJcIV6AE0zEqAWf6kaRheNrxjgaxtUtHqloktyfAbDq1M9X7tVSq9FBS1ovbPt3IPXrk_R1l36",
   MUNNAR:
@@ -276,21 +276,21 @@ export const TEAM = [
     role: "Founder & CEO",
     image: IMAGES.TEAM_1,
     description:
-      "Corporate marketing strategist with over two decades of top-tier industry experience. Visionary leader driving Guardians Holiday's mission of trust and excellence.",
+      "Corporate marketing strategist with over two decades of top-tier industry experience. Visionary leader driving Guardian Holidays' mission of trust and excellence.",
   },
 ] as const;
 
 export const TESTIMONIALS = [
   {
     quote:
-      "Guardians Holiday has transformed the way we sell Kerala. Their attention to detail and premium fleet ensures our VIP clients are consistently impressed. They truly are the invisible backbone of our success.",
+      "Guardian Holidays has transformed the way we sell Kerala. Their attention to detail and premium fleet ensures our VIP clients are consistently impressed. They truly are the invisible backbone of our success.",
     author: "Sarah Mitchell",
     title: "Director, Elite Travels UK",
     initials: "SM",
   },
   {
     quote:
-      "As a boutique agency, we need partners who understand discretion and luxury. Guardians Holiday provides that perfectly. Their B2B support is responsive and professional.",
+      "As a boutique agency, we need partners who understand discretion and luxury. Guardian Holidays provides that perfectly. Their B2B support is responsive and professional.",
     author: "Rajesh Kumar",
     title: "CEO, Heritage Journeys Dubai",
     initials: "RK",

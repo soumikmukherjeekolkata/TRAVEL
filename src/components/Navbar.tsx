@@ -35,7 +35,7 @@ export default function Navbar() {
           <img
             alt={`${COMPANY.NAME} Logo`}
             className="h-12 w-auto"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZhh7yha_B2mui0UxUYuay0Ok-qA5jZ6USX2Jo6d6Hn-FurgdmuwQLCxcNi0LThG3vAZse4TMFy8p5rdFSOHsek8KExBMMX2J663Ayw0rqT8bfXkPazZHsq66ltFwBZhwndLn32njsApmuzicfHvZF2_b--RbbrYmY5u3kBot6Cy04HDx-KQ2tEfjIpDB_9JEID2qCnHtEvFmQq2hEAm0JRfEX0f9tZ8LD6PjCxZbwHA80XIQjntDZadrdSjKMQm5OzXzwb1gjy1F2"
+            src="/Logo.jpeg"
           />
           <span className="font-h3-desktop text-h3-desktop text-primary tracking-tight hidden lg:block">
             {COMPANY.NAME}
