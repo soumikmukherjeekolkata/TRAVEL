@@ -17,9 +17,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Guardians Holiday | Kerala B2B Travel Excellence",
+  title: "Guardians Holiday | Your Trusted B2B Travel Partner",
   description:
-    "Partner with Kerala's premier B2B ground handler. We deliver seamless, high-touch luxury itineraries tailored for your discerning clientele.",
+    "Premier full-service DMC and travel solutions provider. Flights, hotels, transport, visa assistance, forex, and curated itineraries across India and beyond.",
 };
 
 export default function RootLayout({

@@ -1,164 +1,171 @@
 import Link from "next/link";
-import { IMAGES, TEAM } from "@/lib/constants";
+import { IMAGES, TEAM, COMPANY } from "@/lib/constants";
 
 export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-primary/40 z-10" />
-          <img
-            className="w-full h-full object-cover"
-            src={IMAGES.ABOUT_HERO}
-            alt="Kerala backwaters at sunrise"
-          />
-        </div>
-        <div className="relative z-20 text-center max-w-3xl px-gutter">
-          <h1 className="font-h1-desktop text-h1-desktop text-surface-container-lowest mb-md">
-            About Guardians Holiday
+      <header className="relative h-[450px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-primary/40 z-10" />
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center"
+          style={{ backgroundImage: `url('${IMAGES.ABOUT_HERO}')` }}
+        />
+        <div className="relative z-20 text-center px-gutter max-w-4xl">
+          <span className="text-secondary-fixed font-label-caps uppercase tracking-widest mb-sm block">
+            Our Story
+          </span>
+          <h1 className="font-h1-desktop text-h1-desktop text-surface-container-lowest mb-md drop-shadow-lg">
+            About {COMPANY.NAME}
           </h1>
-          <p className="font-body-lg text-body-lg text-surface-container-lowest/90 italic">
-            Redefining Kerala B2B Travel Excellence through heritage, hospitality, and unparalleled expertise.
+          <p className="font-body-lg text-body-lg text-surface-container-lowest/90 max-w-2xl mx-auto">
+            A premier full-service DMC and travel solutions provider built on trust,
+            efficiency, and a passion for delivering exceptional travel experiences.
           </p>
         </div>
-      </section>
-
-      {/* Our Story */}
-      <section className="py-xl max-w-container-max mx-auto px-gutter">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
-          <div className="space-y-md">
-            <span className="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Our Heritage</span>
-            <h2 className="font-h2-desktop text-h2-desktop text-primary">A Legacy of Curating Extraordinary Journeys</h2>
-            <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              Founded on the principles of integrity and authentic Malayali hospitality, Guardians Holiday emerged as a
-              response to the growing need for a truly specialized B2B partner in Kerala&apos;s travel landscape. We don&apos;t
-              just book tours; we craft experiences that linger in the memory of every traveler.
-            </p>
-            <p className="font-body-md text-body-md text-on-surface-variant">
-              Our journey began with a single mission: to be the guardians of your client&apos;s holiday, ensuring every detail
-              reflects the prestige and beauty of God&apos;s Own Country. Today, we stand as a trusted backbone for hundreds
-              of agents worldwide.
-            </p>
-          </div>
-          <div className="relative group">
-            <div className="absolute -inset-4 border border-secondary/20 rounded-xl -z-10 group-hover:scale-105 transition-transform duration-500" />
-            <img
-              className="rounded-xl w-full aspect-[4/3] object-cover"
-              src={IMAGES.ABOUT_STORY}
-              alt="Traditional Kerala brass lamps and jasmine flowers"
-            />
-          </div>
-        </div>
-      </section>
+      </header>
 
       {/* Mission & Vision */}
-      <section className="py-xl bg-surface-container-low relative">
-        <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-md relative z-10">
-          <div className="bg-surface-container-lowest p-lg rounded-xl luxury-shadow border-t-2 border-secondary space-y-md">
-            <span className="material-symbols-outlined text-secondary text-4xl">visibility</span>
-            <h3 className="font-h3-desktop text-h3-desktop text-primary">Our Vision</h3>
-            <p className="font-body-md text-body-md text-on-surface-variant">
-              To be the global benchmark for luxury B2B travel management in Kerala, setting new standards for
-              reliability, cultural integrity, and bespoke service delivery.
-            </p>
-          </div>
-          <div className="bg-surface-container-lowest p-lg rounded-xl luxury-shadow border-t-2 border-secondary space-y-md">
-            <span className="material-symbols-outlined text-secondary text-4xl">flag</span>
-            <h3 className="font-h3-desktop text-h3-desktop text-primary">Our Mission</h3>
-            <p className="font-body-md text-body-md text-on-surface-variant">
-              To empower our travel partners with exclusive inventories, expert local insights, and seamless operational
-              support, ensuring every guest experiences the pinnacle of Kerala&apos;s beauty.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="py-xl bg-primary text-on-primary">
-        <div className="max-w-container-max mx-auto px-gutter grid grid-cols-2 md:grid-cols-4 gap-lg text-center">
-          {[
-            { value: "15+", label: "Years in Business" },
-            { value: "250+", label: "Itineraries" },
-            { value: "1.2k", label: "Agents Served" },
-            { value: "45+", label: "Destinations" },
-          ].map((stat) => (
-            <div key={stat.label} className="space-y-xs">
-              <div className="font-h1-desktop text-h1-desktop text-secondary-fixed">{stat.value}</div>
-              <div className="font-label-caps text-label-caps uppercase opacity-80">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Values */}
       <section className="py-xl max-w-container-max mx-auto px-gutter">
-        <div className="text-center mb-xl">
-          <span className="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Our Philosophy</span>
-          <h2 className="font-h2-desktop text-h2-desktop text-primary mt-sm">Core Values of Excellence</h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
-          {[
-            { icon: "verified_user", title: "Reliability", desc: "Unyielding commitment to operational punctuality and service consistency across all bookings." },
-            { icon: "school", title: "Expertise", desc: "Decades of on-ground local knowledge ensuring your clients get the most authentic experiences." },
-            { icon: "spa", title: "Hospitality", desc: "The warm, personal touch of Kerala that treats every visitor not as a guest, but as a family member." },
-            { icon: "handshake", title: "Partnership", desc: "Building long-term, transparent relationships with B2B agents through mutual growth and trust." },
-          ].map((v) => (
-            <div key={v.title} className="p-md bg-background rounded-xl luxury-shadow border border-secondary/10 hover:border-secondary/40 transition-all duration-300">
-              <div className="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center mb-sm">
-                <span className="material-symbols-outlined text-secondary">{v.icon}</span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+          <div>
+            <h2 className="font-h2-desktop text-h2-desktop text-primary mb-md">
+              Who We Are
+            </h2>
+            <p className="font-body-lg text-body-lg text-on-surface-variant mb-lg">
+              We are a team of dedicated people who have come together as{" "}
+              <strong>{COMPANY.NAME}</strong>, driven by our passion for tourism.
+              We are a customer service oriented company with{" "}
+              <strong>20+ years of experience</strong> in the Travel and Tourism field.
+            </p>
+            <p className="font-body-lg text-body-lg text-on-surface-variant mb-lg">
+              Based in <strong>Kolkata</strong>, {COMPANY.NAME} is spearheaded by{" "}
+              <strong>{COMPANY.FOUNDER}</strong>, a corporate marketing strategist
+              with over two decades of top-tier industry experience. Our core
+              philosophy is built on trust, efficiency, and delivering end-to-end
+              travel management with absolute precision.
+            </p>
+            <div className="grid grid-cols-2 gap-md mt-lg">
+              <div className="bg-surface-container-lowest p-md rounded-xl luxury-shadow border-l-4 border-secondary">
+                <h3 className="font-h3-desktop text-h3-desktop text-primary mb-xs">Our Mission</h3>
+                <p className="font-body-md text-on-surface-variant">
+                  To perform and deliver excellent quality service with competitive rates
+                  and build longstanding partnerships with our business partners.
+                </p>
               </div>
-              <h4 className="font-button text-button text-primary mb-xs">{v.title}</h4>
-              <p className="text-sm text-on-surface-variant">{v.desc}</p>
+              <div className="bg-surface-container-lowest p-md rounded-xl luxury-shadow border-l-4 border-primary">
+                <h3 className="font-h3-desktop text-h3-desktop text-primary mb-xs">Our Vision</h3>
+                <p className="font-body-md text-on-surface-variant">
+                  To earn the reputation as &ldquo;Your Preferred Travel Agency&rdquo;
+                  through unwavering commitment to service excellence.
+                </p>
+              </div>
             </div>
-          ))}
+          </div>
+          <div className="relative">
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <img
+                className="w-full h-full object-cover"
+                src={IMAGES.ABOUT_STORY}
+                alt="Kerala landscape"
+              />
+            </div>
+            <div className="absolute -bottom-6 -left-6 bg-primary p-md rounded-lg shadow-xl hidden md:block">
+              <p className="text-secondary-fixed font-bold text-lg">20+ Years</p>
+              <p className="text-surface-container-lowest/70 text-sm">Of Travel Excellence</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-xl bg-surface-container-low">
+      {/* What We Do */}
+      <section className="bg-surface-container-low py-xl">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="text-center mb-xl">
-            <h2 className="font-h2-desktop text-h2-desktop text-primary">The Minds Behind the Magic</h2>
-            <p className="font-body-md text-body-md text-on-surface-variant mt-sm">Meet our leadership team dedicated to your success.</p>
+          <div className="text-center mb-lg">
+            <h2 className="font-h2-desktop text-h2-desktop text-primary">What We Do</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
-            {TEAM.map((member) => (
-              <div key={member.name} className="group">
-                <div className="relative overflow-hidden rounded-xl aspect-[3/4] mb-sm">
-                  <img
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
-                    src={member.image}
-                    alt={member.name}
-                  />
-                </div>
-                <h5 className="font-h3-desktop text-lg text-primary">{member.name}</h5>
-                <p className="text-sm text-secondary font-medium">{member.role}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-md">
+            {[
+              {
+                title: "Sell & Manage Travel",
+                desc: "We sell accommodations, transportation, tours & activities. We handle travel issues, conflicts, complaints, cancellations and refunds with professionalism.",
+              },
+              {
+                title: "Destination Management",
+                desc: "Our primary focus is Destination Management for South Indian states of Kerala, Karnataka, and Tamilnadu, offering bespoke services to B2B agents.",
+              },
+              {
+                title: "B2B Partnership",
+                desc: "We manage Travel Agencies (B2B Agents) to provide all sorts of Travel Services through our commitment of bespoke services at the lowest possible prices.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="bg-surface-container-lowest p-lg rounded-xl luxury-shadow border-t-2 border-secondary/30"
+              >
+                <h3 className="font-h3-desktop text-h3-desktop text-primary mb-sm">{item.title}</h3>
+                <p className="font-body-md text-on-surface-variant">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-xl max-w-container-max mx-auto px-gutter text-center">
-        <div className="bg-primary-container p-xl rounded-3xl relative overflow-hidden">
-          <h2 className="font-h2-desktop text-h2-desktop text-surface-container-lowest mb-md relative z-10">
-            Ready to Elevate Your Kerala Offerings?
-          </h2>
-          <p className="font-body-lg text-body-lg text-surface-container-lowest/80 mb-lg max-w-2xl mx-auto relative z-10">
-            Join our network of successful travel partners and offer your clients the pinnacle of Kerala luxury.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-md justify-center relative z-10">
-            <Link
-              href="/login"
-              className="bg-secondary-fixed text-on-secondary-fixed px-lg py-sm rounded-full font-button text-button hover:bg-secondary-fixed-dim transition-colors"
+      {/* Founder */}
+      <section className="py-xl max-w-container-max mx-auto px-gutter">
+        <div className="text-center mb-lg">
+          <span className="font-label-caps text-label-caps text-secondary uppercase mb-xs block">
+            Leadership
+          </span>
+          <h2 className="font-h2-desktop text-h2-desktop text-primary">Meet Our Founder</h2>
+        </div>
+        <div className="max-w-3xl mx-auto">
+          {TEAM.map((member) => (
+            <div
+              key={member.name}
+              className="bg-surface-container-lowest rounded-xl luxury-shadow overflow-hidden border-t-2 border-secondary flex flex-col md:flex-row"
             >
-              Partner With Us
+              <div className="md:w-80 h-80 md:h-auto overflow-hidden bg-primary/5">
+                <img
+                  className="w-full h-full object-cover"
+                  src={member.image}
+                  alt={member.name}
+                />
+              </div>
+              <div className="p-lg flex flex-col justify-center">
+                <h3 className="font-h2-desktop text-h2-desktop text-primary mb-xs">{member.name}</h3>
+                <p className="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-md">
+                  {member.role}
+                </p>
+                <p className="font-body-lg text-body-lg text-on-surface-variant">{member.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-primary py-xl text-center relative overflow-hidden">
+        <div className="relative z-10 max-w-2xl mx-auto px-gutter">
+          <h2 className="font-h2-desktop text-h2-desktop text-on-primary mb-md">
+            Ready to Start a Partnership?
+          </h2>
+          <p className="font-body-lg text-body-lg text-on-primary/80 mb-lg">
+            We would love to collaborate with you and manage your upcoming travel portfolios.
+          </p>
+          <div className="flex flex-wrap justify-center gap-md">
+            <Link
+              href="/contact"
+              className="bg-secondary-fixed text-on-secondary-fixed font-button text-button px-lg py-md rounded-full hover:bg-secondary-container transition-all shadow-lg"
+            >
+              Get in Touch
             </Link>
-            <button className="border border-surface-container-lowest text-surface-container-lowest px-lg py-sm rounded-full font-button text-button hover:bg-surface-container-lowest hover:text-primary transition-colors">
-              Request Catalog
-            </button>
+            <a
+              href={`tel:${COMPANY.PHONE}`}
+              className="bg-transparent border border-on-primary/30 text-on-primary font-button text-button px-lg py-md rounded-full hover:bg-on-primary/10 transition-all"
+            >
+              Call {COMPANY.PHONE}
+            </a>
           </div>
         </div>
       </section>

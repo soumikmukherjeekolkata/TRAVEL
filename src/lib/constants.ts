@@ -1,3 +1,14 @@
+export const COMPANY = {
+  NAME: "Guardians Holiday",
+  TAGLINE: "Your Trusted B2B Travel Partner",
+  EMAIL: "guardiansholiday@gmail.com",
+  PHONE: "+91 82299 51289",
+  WHATSAPP: "+91 82299 51289",
+  WEBSITE: "www.guardianholidays.co.in",
+  ADDRESS: "Kolkata, West Bengal, India",
+  FOUNDER: "Aneeta Bhowmick",
+} as const;
+
 export const IMAGES = {
   LOGO: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZhh7yha_B2mui0UxUYuay0Ok-qA5jZ6USX2Jo6d6Hn-FurgdmuwQLCxcNi0LThG3vAZse4TMFy8p5rdFSOHsek8KExBMMX2J663Ayw0rqT8bfXkPazZHsq66ltFwBZhwndLn32njsApmuzicfHvZF2_b--RbbrYmY5u3kBot6Cy04HDx-KQ2tEfjIpDB_9JEID2qCnHtEvFmQq2hEAm0JRfEX0f9tZ8LD6PjCxZbwHA80XIQjntDZadrdSjKMQm5OzXzwb1gjy1F2",
   HERO_BG:
@@ -22,16 +33,12 @@ export const IMAGES = {
     "https://lh3.googleusercontent.com/aida-public/AB6AXuAcDUQDtEVhKcHZJTufiZYjDfVJdxj8Br1XNHP7g7oc8i64WmvzrkBEPg3OTo2EdQab6ydbzcowbxKbwSPI8wC8A-ilN3MgIleB1Y4yeYEbkexapb2aMU-tfomqML3coRIy17zceV3dmm0k5Hm0dkfH5RnaNRy_oxJa2kh2ybmW9m7a2iS1ZlAaRKCb-s5yyd7ILyET-xM2gCTW7VH__RRdyCUWOtnEpttxoX9tOwh_1yZ_q5P8LbBlEhw4raJARVQJVuHZGG920dp5",
   DETAIL_HERO:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuCvprUg3STWCfukEPzO1wg8xKYzP1fUA8C1t-0T-mkyosq2DH6Jp9YeVL9u22mzApXNa7PwcZ_r8bZwZ8m2eUprGM5grxpn81RKhBjOxryeZI-XlV1V4tF2eOXrnJvwsnDL0lpf_uiqtrJvfA9rq2sxKp-htB7hs10jkb0JBiyfUgODajgnXx1uIB6m94jA2PGaRXNcVIdQQZ07n6SeoNb5yyiHvSh7ZPWtMrGM-CX3os1xlFLO88XulmbBrV6rYTeBNefdB1AHpG65",
-  TEAM_1:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuBJyOMgGv1OQdTbamLOHGTc1CplXI81o9rznoBttKdZj6ImqD0vKxxHODeawLA909ui-_banqVOBAHSW7E22uqit-njt2rsYowVho-1TDHw6-9gEUKf-nIcVMX9QqOyAON4KCIuEStOJ79KsDUpTyo1vvHDqdUUf4dQoe2viHBEgXZ4N4IVhQKnL1LBaEWDU__lNPocYEmsKfwSUqqCH6ZxbDfKnzFP6w9JESB9euai1504HFpYs139oDC6U69-j3J-OtkYDWjFERru",
-  TEAM_2:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDl_yIk--H4LhCwuDns6D7T-yPuAp2GL6oqOiDncsTO8unEjCia8d-mx1lrZ_WIyx1wAB-0GTpPBNBMfLPMYZz4tThhruIw-ebsZBTrnJj2b2AI-DxyoaeSAaV7fazaFd7j7o8hDnf2Wu6cyFcHmDpPOAAXqVF0ffpJifFKvSziFItmspESj6nQqMKjNlRhcU3rFN0bdw5X-PZYjFCOSmsO0SPofpUFzc3TxIyYGGru7mqp_O5gdhtKopquREvU4dgIAKxLY2KUdcXE",
-  TEAM_3:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuABH8nFUNrht4gPvZY2v2bHfeH2FbvbTI3mgJwqK5RYUmWI5N7Q9YOteuOVg0XkBu-NOFKDKpwcCBzZQMD0SRJFb38YZRBGswjMt2bYnwbnx5eWShBtsNJbjEbMC1ZMvhHcjoYOEyKYl74TNXnBJOndWTlhMNOlyWMdvxI__5e4xT_zA2ClOSykatsyA62X-5csiSxZt2yVfvxOmOX2pO9kia1p7kwQWFal-AJt0fNz4rltV3N094oZoYPo6nXL6ESW6rSCsvpfTDf0",
-  TEAM_4:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDJ1AjdCtJ0qLJfSL4FnH1k_tepmr_VjS3L7jpBf3O5duukBTGJfcBgprxbEi5gLx3YBIUJ1lK_bRR7uL_wlYa0TPuzrNJJ34sdyVessZdzd5JapUhTXmrtmnPtCBNz0J1PO7r8RUx7Z0n5YrPu8gi5CUF_x71EudS-Ptu_iihUN4RWuUysUp3GiZILVBns8yBfdudCvDwI30FGltX7r8-_fMJ55wMtB-P0iWEaH_WHEHmGN1IcfdwonSaqsMLpsVfXCQmWPVoRDNk1",
-  SERVICES_MUNNAR:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuDE225uE2Jmv6iYknlRZgBHZ6TQ1fPo-F_7g-bhKG3iwXHvbSEPFIJK7r1i1cS70EQTWgpeuAwTfsiCzyDw3-8NDN6kiZg53gp968WYgA9d6O9aABY-2CAv_ukDlX_aSWUUovS6x9BbazbOge6tEcRKzvRnT7fnjMW8W9Ggkqw7cMIqYJs3q_qbIuFXgKfUvTxCJoYwX0An-TFWFlGVGU_ZCr6yw_vflt6pPwQvzTncJHO55uylbRdha0YCxB4hYmHTOUWthJiGLrSj",
+  DETAIL_GALLERY_1:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuB7QUd80uU_D3YCzGMKe4N7fKcl8McuhpIH_tUye3Qn0E99JYKHmwpr0M9WRb9gjr5CLuVkO-IxQUQ5vtfm-ONhdJ5FyWMeKeQNDU9JJCjLajmnp-RoodwB0pdgB7FApoJV8VmRL5VKPlITSG-uBlBNbesih-mSL2LOyn2amxQ7po8yRA-f-FFPYBqLxaQLcBcFXGyPa1gGmD6S-qQWmUt8tZuwNm0inMQfDEg8GOiHwJ1Ue28kwudgRarme6otaAs1LykQi7BiGrnH",
+  DETAIL_GALLERY_2:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBuNwjzQo6RA8yfEfpMvBfk77kvi2lg_a58sUw3I9LdTpY6GMU5B-J8NOa3UFS1klmHeXLywlHwS-ZIoJ9Fj9QlxymFFsuAoA8a0C9UITjfykeZmCU1Dm5SP32XPm5YYiEaZdX5AUz6M-1T7tegSrm_5WjaTX1ykM8yyUP9_5HCZsNOyDxg3p6K080JEwH7frwZDBM_iUnWiMWLWfRzCE7vU42W3kH-tTlrxE4aPTzd0RySyPLLEQcuINjIPqgNRkVtd-DjCKU9XbIr",
+  DETAIL_GALLERY_3:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuCAVuhHGJouESr-PTwekltckM3cKmCvp1xyn55Gwtkptx5IbuqZpRnLfJ_HAe84QBSieFH3A3VntbY9TqMcRsJhm_M17FcYTDSrgIN6Y-L5u8AkvtD_FdDfM1qY18zAApm7ezkaQ0SkWqi3R4kzti02laaX0XqIan8eOsdS60aOzrCwmmmuhieeO2hfE3EfLpo496ixKptYqTBeBPdgp_iMP3xavmgX_xkLWbE8FiRpwHs10jD3cyJ_I0c4lzQ0Yr_-Ec9qFQsgFTjP",
   ITINERARY_CARD_1:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuALhkj59aSv7iXAVXtsm02VDyTKm8f7-4j132lZndXmGdqD_H8U-55s6uHUUhHijSD4dX6PZ-oSf4xvo-GXz4e1czbQj9-owUsyYoMn2pFeka6A9EpMFScKEqyHEhMHVJXKTSHW5tcLgoYWSwGbbss0yYvhUFPFjTpehnzaWtVpB9RUlKRmyJulJEHqXYdNSxRz_RQhxPwtqM9bRIuSz-PMZOJazs6weeNIfXuOQ9r9wszt02WGzgLsAJeru85MXWIaPdZc10XsmGkf",
   ITINERARY_CARD_2:
@@ -44,12 +51,16 @@ export const IMAGES = {
     "https://lh3.googleusercontent.com/aida-public/AB6AXuB8JduHMqzd7zKLm3zz2gVoH4HitUX62LoCN2RLW07YQuJJe7qzpnKuwt04lrqT526SKiUfkRGLtdqAbb1eVFspvM7L5JA3IuUIKMLdyFaIjmgQV-rjAs0rbNbrhCiO-AIc-Ezy7i_yOw7KiX-AFPdZ-ho8Ks7nHDh067NgwaAqXZLqdLIZqb6OI3nWWpVQDtVGVTkYFOM5vcMlytbyrU4sCK47uxwh4kxtU4gQ1g6oxzvHGd7C5pz1VtBP0mset725Gr0sBcxxIJvn",
   ITINERARY_CARD_6:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuBE9Wf8MpVQapjlMPdFsfig7jlPZcUv-r5jA1m-RU0ASKRUSL9i29NHqA39BEvw3hDyKa6qY-qf5D28yLafd1-SCV1AsHv2-8JxRKd0nJO27ngQY5hIGD8dppfYOYQRy-JAM-Ka8tYTToVMXueB6J8WYiF9al0BzpUE-hfEVFOM2kmJWHh4mggI1JVoLT-zrXj4kX9Y6OOl4H-ddxi7QHrRbJ4cYzW8wyLdAydR7W3CD5yKvKryzL--1JVmxHIjlPda4-nWvsaWwD2j",
-  DETAIL_GALLERY_1:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuB7QUd80uU_D3YCzGMKe4N7fKcl8McuhpIH_tUye3Qn0E99JYKHmwpr0M9WRb9gjr5CLuVkO-IxQUQ5vtfm-ONhdJ5FyWMeKeQNDU9JJCjLajmnp-RoodwB0pdgB7FApoJV8VmRL5VKPlITSG-uBlBNbesih-mSL2LOyn2amxQ7po8yRA-f-FFPYBqLxaQLcBcFXGyPa1gGmD6S-qQWmUt8tZuwNm0inMQfDEg8GOiHwJ1Ue28kwudgRarme6otaAs1LykQi7BiGrnH",
-  DETAIL_GALLERY_2:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuBuNwjzQo6RA8yfEfpMvBfk77kvi2lg_a58sUw3I9LdTpY6GMU5B-J8NOa3UFS1klmHeXLywlHwS-ZIoJ9Fj9QlxymFFsuAoA8a0C9UITjfykeZmCU1Dm5SP32XPm5YYiEaZdX5AUz6M-1T7tegSrm_5WjaTX1ykM8yyUP9_5HCZsNOyDxg3p6K080JEwH7frwZDBM_iUnWiMWLWfRzCE7vU42W3kH-tTlrxE4aPTzd0RySyPLLEQcuINjIPqgNRkVtd-DjCKU9XbIr",
-  DETAIL_GALLERY_3:
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuCAVuhHGJouESr-PTwekltckM3cKmCvp1xyn55Gwtkptx5IbuqZpRnLfJ_HAe84QBSieFH3A3VntbY9TqMcRsJhm_M17FcYTDSrgIN6Y-L5u8AkvtD_FdDfM1qY18zAApm7ezkaQ0SkWqi3R4kzti02laaX0XqIan8eOsdS60aOzrCwmmmuhieeO2hfE3EfLpo496ixKptYqTBeBPdgp_iMP3xavmgX_xkLWbE8FiRpwHs10jD3cyJ_I0c4lzQ0Yr_-Ec9qFQsgFTjP",
+  TEAM_1:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuBJyOMgGv1OQdTbamLOHGTc1CplXI81o9rznoBttKdZj6ImqD0vKxxHODeawLA909ui-_banqVOBAHSW7E22uqit-njt2rsYowVho-1TDHw6-9gEUKf-nIcVMX9QqOyAON4KCIuEStOJ79KsDUpTyo1vvHDqdUUf4dQoe2viHBEgXZ4N4IVhQKnL1LBaEWDU__lNPocYEmsKfwSUqqCH6ZxbDfKnzFP6w9JESB9euai1504HFpYs139oDC6U69-j3J-OtkYDWjFERru",
+  TEAM_2:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDl_yIk--H4LhCwuDns6D7T-yPuAp2GL6oqOiDncsTO8unEjCia8d-mx1lrZ_WIyx1wAB-0GTpPBNBMfLPMYZz4tThhruIw-ebsZBTrnJj2b2AI-DxyoaeSAaV7fazaFd7j7o8hDnf2Wu6cyFcHmDpPOAAXqVF0ffpJifFKvSziFItmspESj6nQqMKjNlRhcU3rFN0bdw5X-PZYjFCOSmsO0SPofpUFzc3TxIyYGGru7mqp_O5gdhtKopquREvU4dgIAKxLY2KUdcXE",
+  TEAM_3:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuABH8nFUNrht4gPvZY2v2bHfeH2FbvbTI3mgJwqK5RYUmWI5N7Q9YOteuOVg0XkBu-NOFKDKpwcCBzZQMD0SRJFb38YZRBGswjMt2bYnwbnx5eWShBtsNJbjEbMC1ZMvhHcjoYOEyKYl74TNXnBJOndWTlhMNOlyWMdvxI__5e4xT_zA2ClOSykatsyA62X-5csiSxZt2yVfvxOmOX2pO9kia1p7kwQWFal-AJt0fNz4rltV3N094oZoYPo6nXL6ESW6rSCsvpfTDf0",
+  TEAM_4:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDJ1AjdCt0JqLJfSL4FnH1k_tepmr_VjS3L7jpBf3O5duukBTGJfcBgprxbEi5gLx3YBIUJ1lK_bRR7uL_wlYa0TPuzrNJJ34sdyVessZdzd5JapUhTXmrtmnPtCBNz0J1PO7r8RUx7Z0n5YrPu8gi5CUF_x71EudS-Ptu_iihUN4RWuUysUp3GiZILVBns8yBfdudCvDwI30FGltX7r8-_fMJ55wMtB-P0iWEaH_WHEHmGN1IcfdwonSaqsMLpsVfXCQmWPVoRDNk1",
+  SERVICES_MUNNAR:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDE225uE2Jmv6iYknlRZgBHZ6TQ1fPo-F_7g-bhKG3iwXHvbSEPFIJK7r1i1cS70EQTWgpeuAwTfsiCzyDw3-8NDN6kiZg53gp968WYgA9d6O9aABY-2CAv_ukDlX_aSWUUovS6x9BbazbOge6tEcRKzvRnT7fnjMW8W9Ggkqw7cMIqYJs3q_qbIuFXgKfUvTxCJoYwX0An-TFWFlGVGU_ZCr6yw_vflt6pPwQvzTncJHO55uylbRdha0YCxB4hYmHTOUWthJiGLrSj",
 } as const;
 
 export const ITINERARIES = [
@@ -199,61 +210,73 @@ export const ITINERARIES = [
   },
 ];
 
-export const SERVICES = [
+export const CORE_SERVICES = [
   {
-    icon: "airport_shuttle",
-    title: "Transfers & Logistics",
+    icon: "flight",
+    title: "Flight Bookings",
     description:
-      "Premium fleet management across Kerala. From luxury sedans for VIPs to spacious coaches for groups, we ensure seamless connectivity with professional English-speaking chauffeurs.",
+      "Competitive domestic and international ticketing with flexible booking options. We manage last-minute changes and ensure smooth transit for your clients.",
   },
   {
     icon: "hotel",
-    title: "Hotel Bookings",
+    title: "Hotels & Accommodation",
     description:
-      "Exclusive tie-ups with Kerala's most prestigious resorts and heritage boutique stays. Benefit from our preferred partner rates and guaranteed room allotments.",
+      "A curated network of stays ranging from budget-friendly comfort to ultra-luxury resorts. Exclusive tie-ups with premium properties across India.",
   },
   {
-    icon: "sailing",
-    title: "Houseboat & Cruises",
+    icon: "airport_shuttle",
+    title: "Transport & Logistics",
     description:
-      "Signature Kettuvallam experiences in Alleppey and Kumarakom. Our private fleet offers traditional aesthetics with modern luxury amenities and gourmet onboard dining.",
+      "Safe, reliable, and premium ground transportation with professional English-speaking chauffeurs. Airport transfers and fleet management across all destinations.",
   },
+  {
+    icon: "badge",
+    title: "Visa & Passport Assistance",
+    description:
+      "Expert guidance through documentation and seamless application processing. End-to-end support for hassle-free international travel.",
+  },
+  {
+    icon: "currency_exchange",
+    title: "Foreign Exchange (Forex)",
+    description:
+      "Hassle-free currency exchange and travel card solutions for international travelers at competitive rates.",
+  },
+] as const;
+
+export const DMC_SERVICES = [
   {
     icon: "map",
-    title: "Curated Sightseeing",
+    title: "Kerala & South India DMC",
     description:
-      "Off-the-beaten-path experiences including Kathakali performances, spice plantation tours, and local artisan visits guided by regional experts who know Kerala's secrets.",
+      "As direct Destination Management Experts, we offer unmatched local operational support, exclusive hotel inventory, and deeply customized itineraries across Kerala, Karnataka, and Tamilnadu.",
   },
   {
-    icon: "flight",
-    title: "Flight Assistance",
+    icon: "explore",
+    title: "Pan-India Travel",
     description:
-      "End-to-end ticketing support and VIP airport handling services. We manage last-minute changes and ensure a smooth transit for all your incoming international and domestic clients.",
+      "Comprehensive holiday setups across all major and off-beat tourist destinations within India. Leisure and corporate travel managed with precision.",
   },
   {
-    icon: "edit_note",
-    title: "Bespoke Customization",
+    icon: "public",
+    title: "International Holidays",
     description:
-      "Tailor-made itineraries for Honeymoons, MICE, or Wellness retreats. We provide white-label service kits that allow you to brand the experience as your own.",
+      "Tailor-made outbound packages spanning popular global tourist hotspots. Curated experiences for discerning travelers worldwide.",
+  },
+  {
+    icon: "handshake",
+    title: "B2B Agent Support",
+    description:
+      "White-label services, competitive B2B pricing, and 24/7 on-ground assistance. We help you deliver unforgettable travel experiences to your clients.",
   },
 ] as const;
 
 export const TEAM = [
-  { name: "Arjun Nair", role: "Founder & CEO", image: IMAGES.TEAM_1 },
   {
-    name: "Meera Krishnan",
-    role: "Head of Operations",
-    image: IMAGES.TEAM_2,
-  },
-  {
-    name: "Siddharth Varma",
-    role: "Strategic Partnerships",
-    image: IMAGES.TEAM_3,
-  },
-  {
-    name: "Lekshmi Menon",
-    role: "Guest Relations Head",
-    image: IMAGES.TEAM_4,
+    name: "Aneeta Bhowmick",
+    role: "Founder & CEO",
+    image: IMAGES.TEAM_1,
+    description:
+      "Corporate marketing strategist with over two decades of top-tier industry experience. Visionary leader driving Guardians Holiday's mission of trust and excellence.",
   },
 ] as const;
 

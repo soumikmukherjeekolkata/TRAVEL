@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { COMPANY } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -12,26 +13,26 @@ export default function Footer() {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZhh7yha_B2mui0UxUYuay0Ok-qA5jZ6USX2Jo6d6Hn-FurgdmuwQLCxcNi0LThG3vAZse4TMFy8p5rdFSOHsek8KExBMMX2J663Ayw0rqT8bfXkPazZHsq66ltFwBZhwndLn32njsApmuzicfHvZF2_b--RbbrYmY5u3kBot6Cy04HDx-KQ2tEfjIpDB_9JEID2qCnHtEvFmQq2hEAm0JRfEX0f9tZ8LD6PjCxZbwHA80XIQjntDZadrdSjKMQm5OzXzwb1gjy1F2"
             />
             <span className="font-h3-desktop text-h3-desktop text-surface-container-lowest">
-              Guardians
+              {COMPANY.NAME}
             </span>
           </div>
           <p className="font-body-md text-surface-container-highest/60 mb-md">
-            Providing elite B2B travel solutions and ground handling across the
-            majestic landscapes of Kerala.
+            Premier full-service DMC and travel solutions provider. Your trusted B2B
+            partner for seamless travel across India and beyond.
           </p>
           <div className="flex gap-sm">
-            <Link
-              href="#"
-              className="w-8 h-8 rounded-full bg-surface-container-highest/10 flex items-center justify-center text-surface-container-lowest hover:bg-secondary-fixed transition-colors"
-            >
-              <span className="material-symbols-outlined text-sm">public</span>
-            </Link>
-            <Link
-              href="#"
+            <a
+              href={`mailto:${COMPANY.EMAIL}`}
               className="w-8 h-8 rounded-full bg-surface-container-highest/10 flex items-center justify-center text-surface-container-lowest hover:bg-secondary-fixed transition-colors"
             >
               <span className="material-symbols-outlined text-sm">mail</span>
-            </Link>
+            </a>
+            <a
+              href={`https://wa.me/${COMPANY.WHATSAPP.replace(/\s/g, "")}`}
+              className="w-8 h-8 rounded-full bg-surface-container-highest/10 flex items-center justify-center text-surface-container-lowest hover:bg-secondary-fixed transition-colors"
+            >
+              <span className="material-symbols-outlined text-sm">chat</span>
+            </a>
           </div>
         </div>
         <div>
@@ -63,70 +64,91 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="/login"
+                href="/about"
                 className="text-surface-container-highest/80 hover:text-secondary-fixed transition-colors font-body-md"
               >
-                Agent Portal
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="text-surface-container-highest/80 hover:text-secondary-fixed transition-colors font-body-md"
+              >
+                Contact
               </Link>
             </li>
           </ul>
         </div>
         <div>
-          <h5 className="text-secondary-fixed font-bold mb-md">Support</h5>
+          <h5 className="text-secondary-fixed font-bold mb-md">Services</h5>
           <ul className="flex flex-col gap-sm">
             <li>
               <Link
-                href="/contact"
+                href="/services"
                 className="text-surface-container-highest/80 hover:text-secondary-fixed transition-colors font-body-md"
               >
-                WhatsApp Support
+                Flight Bookings
               </Link>
             </li>
             <li>
               <Link
-                href="/contact"
+                href="/services"
                 className="text-surface-container-highest/80 hover:text-secondary-fixed transition-colors font-body-md"
               >
-                Contact Us
+                Hotels & Accommodation
               </Link>
             </li>
             <li>
               <Link
-                href="#"
+                href="/services"
                 className="text-surface-container-highest/80 hover:text-secondary-fixed transition-colors font-body-md"
               >
-                Terms of Service
+                Transport & Logistics
               </Link>
             </li>
             <li>
               <Link
-                href="#"
+                href="/services"
                 className="text-surface-container-highest/80 hover:text-secondary-fixed transition-colors font-body-md"
               >
-                Privacy Policy
+                Visa & Forex
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/itineraries"
+                className="text-surface-container-highest/80 hover:text-secondary-fixed transition-colors font-body-md"
+              >
+                DMC Kerala & South India
               </Link>
             </li>
           </ul>
         </div>
         <div>
-          <h5 className="text-secondary-fixed font-bold mb-md">Kerala Office</h5>
+          <h5 className="text-secondary-fixed font-bold mb-md">Contact</h5>
           <p className="text-surface-container-highest/80 font-body-md mb-xs">
-            Cochin Bypass, Palarivattom
+            Kolkata, West Bengal, India
           </p>
           <p className="text-surface-container-highest/80 font-body-md mb-xs">
-            Kochi, Kerala 682025
+            {COMPANY.PHONE}
           </p>
           <p className="text-surface-container-highest/80 font-body-md mb-xs">
-            +91 98470 12345
+            {COMPANY.EMAIL}
           </p>
           <p className="text-surface-container-highest/80 font-body-md">
-            info@guardiansholiday.com
+            {COMPANY.WEBSITE}
           </p>
+          <div className="mt-md pt-md border-t border-surface-container-highest/10">
+            <p className="text-secondary-fixed font-button text-button mb-xs">
+              Founder: {COMPANY.FOUNDER}
+            </p>
+          </div>
         </div>
       </div>
       <div className="max-w-container-max mx-auto px-gutter py-md border-t border-surface-container-highest/10 text-center">
         <p className="text-surface-container-highest/40 text-xs">
-          &copy; 2024 Guardians Holiday. Kerala B2B Travel Excellence.
+          &copy; 2026 {COMPANY.NAME}. All rights reserved. {COMPANY.TAGLINE}
         </p>
       </div>
     </footer>

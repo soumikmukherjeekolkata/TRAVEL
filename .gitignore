@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# temp
+check_pdf.py
+public/extracted/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

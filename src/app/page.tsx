@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { IMAGES, ITINERARIES, TESTIMONIALS } from "@/lib/constants";
+import { IMAGES, ITINERARIES, TESTIMONIALS, CORE_SERVICES, COMPANY } from "@/lib/constants";
 
 export default function HomePage() {
   return (
@@ -16,23 +16,33 @@ export default function HomePage() {
         </div>
         <div className="relative z-10 max-w-container-max mx-auto px-gutter w-full">
           <div className="max-w-2xl">
+            <span className="inline-flex items-center gap-sm bg-secondary-fixed/20 text-secondary-fixed px-md py-xs rounded-full font-label-caps text-label-caps mb-md backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse" />
+              Your Trusted B2B Travel Partner
+            </span>
             <h1 className="font-h1-desktop text-h1-desktop text-surface-container-lowest mb-md leading-tight">
-              Kerala&apos;s Finest Travel Experiences,{" "}
+              Elevate Your Travel Experiences with{" "}
               <span className="text-secondary-fixed">
-                Exclusively for Travel Agents
+                {COMPANY.NAME}
               </span>
             </h1>
             <p className="font-body-lg text-body-lg text-surface-container-highest/90 mb-lg">
-              Partner with Kerala&apos;s premier B2B ground handler. We deliver
-              seamless, high-touch luxury itineraries tailored for your
-              discerning clientele.
+              Premier full-service DMC and travel solutions provider. From flights
+              and hotels to visa assistance and curated itineraries — we deliver
+              seamless, end-to-end travel management for your discerning clientele.
             </p>
             <div className="flex flex-wrap gap-md">
-              <button className="bg-primary hover:bg-primary-container text-on-primary font-button text-button px-lg py-md rounded-full transition-all flex items-center gap-sm shadow-lg">
+              <a
+                href={`tel:${COMPANY.PHONE}`}
+                className="bg-primary hover:bg-primary-container text-on-primary font-button text-button px-lg py-md rounded-full transition-all flex items-center gap-sm shadow-lg"
+              >
                 <span className="material-symbols-outlined">call</span>
                 Call Us
-              </button>
-              <button className="bg-secondary-fixed hover:bg-secondary-container text-on-secondary-fixed font-button text-button px-lg py-md rounded-full transition-all flex items-center gap-sm shadow-lg">
+              </a>
+              <a
+                href={`https://wa.me/${COMPANY.WHATSAPP.replace(/\s/g, "")}`}
+                className="bg-secondary-fixed hover:bg-secondary-container text-on-secondary-fixed font-button text-button px-lg py-md rounded-full transition-all flex items-center gap-sm shadow-lg"
+              >
                 <span
                   className="material-symbols-outlined"
                   style={{ fontVariationSettings: "'FILL' 1" }}
@@ -40,21 +50,21 @@ export default function HomePage() {
                   chat
                 </span>
                 WhatsApp Us
-              </button>
+              </a>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Intro Strip */}
+      {/* Stats Strip */}
       <section className="bg-primary py-lg">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-md items-center text-center">
             {[
-              { icon: "map", label: "25+ Itineraries" },
-              { icon: "verified_user", label: "End-to-End Service" },
-              { icon: "handshake", label: "B2B Exclusive" },
-              { icon: "directions_car", label: "Luxury Fleet" },
+              { icon: "workspace_premium", label: "20+ Years Experience" },
+              { icon: "groups", label: "500+ Agency Partners" },
+              { icon: "map", label: "Pan-India Coverage" },
+              { icon: "support_agent", label: "24/7 Support" },
             ].map((item) => (
               <div
                 key={item.label}
@@ -68,6 +78,99 @@ export default function HomePage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Core Services */}
+      <section className="py-xl max-w-container-max mx-auto px-gutter">
+        <div className="text-center mb-lg">
+          <span className="font-label-caps text-label-caps text-secondary uppercase mb-xs block">
+            Comprehensive Solutions
+          </span>
+          <h2 className="font-h2-desktop text-h2-desktop text-primary">
+            Everything You Need Under One Roof
+          </h2>
+          <p className="font-body-md text-on-surface-variant mt-sm max-w-2xl mx-auto">
+            From ticketing to destination management, we handle every detail so you can focus on your clients.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-md">
+          {CORE_SERVICES.map((service) => (
+            <div
+              key={service.title}
+              className="bg-surface-container-lowest p-lg rounded-xl luxury-shadow flex flex-col items-center text-center transition-transform hover:-translate-y-2 border-t-2 border-secondary/30 hover:border-secondary"
+            >
+              <span className="material-symbols-outlined text-primary text-4xl mb-md">
+                {service.icon}
+              </span>
+              <h4 className="font-h3-desktop text-h3-desktop text-primary mb-sm text-balance">
+                {service.title}
+              </h4>
+              <p className="font-body-md text-on-surface-variant">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* DMC Expertise */}
+      <section className="bg-surface-container-low py-xl">
+        <div className="max-w-container-max mx-auto px-gutter">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+            <div>
+              <span className="font-label-caps text-label-caps text-secondary uppercase mb-xs block">
+                Destination Management
+              </span>
+              <h2 className="font-h2-desktop text-h2-desktop text-primary mb-md">
+                Exclusive DMC for Kerala & South India
+              </h2>
+              <p className="font-body-lg text-body-lg text-on-surface-variant mb-lg">
+                As direct Destination Management Experts, we offer unmatched local
+                operational support, exclusive hotel inventory, and deeply customized
+                itineraries across Kerala, Karnataka, and Tamilnadu.
+              </p>
+              <div className="space-y-md">
+                {[
+                  { icon: "verified", text: "Unmatched local expertise and on-ground support" },
+                  { icon: "inventory", text: "Exclusive hotel inventory and competitive B2B rates" },
+                  { icon: "edit_note", text: "Deeply customized itineraries for every segment" },
+                ].map((item) => (
+                  <div key={item.text} className="flex items-center gap-sm">
+                    <span className="material-symbols-outlined text-secondary">check_circle</span>
+                    <span className="font-body-md text-on-surface-variant">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap gap-md mt-lg">
+                <Link
+                  href="/services"
+                  className="bg-primary text-on-primary font-button text-button px-lg py-md rounded-full hover:bg-primary-container transition-all"
+                >
+                  Explore Our Services
+                </Link>
+                <Link
+                  href="/itineraries"
+                  className="border border-secondary text-secondary font-button text-button px-lg py-md rounded-full hover:bg-secondary hover:text-white transition-all"
+                >
+                  View Itineraries
+                </Link>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+                <img
+                  className="w-full h-full object-cover"
+                  src={IMAGES.SERVICES_MUNNAR}
+                  alt="Kerala tea plantations"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-primary p-md rounded-lg shadow-xl hidden md:block">
+                <p className="text-secondary-fixed font-bold text-lg">Kerala • Karnataka • Tamilnadu</p>
+                <p className="text-surface-container-lowest/70 text-sm">South India DMC Specialists</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -128,75 +231,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Snapshot */}
-      <section className="bg-surface-container-low py-xl">
-        <div className="max-w-container-max mx-auto px-gutter text-center mb-lg">
-          <span className="font-label-caps text-label-caps text-secondary uppercase mb-xs block">
-            Our Expertise
-          </span>
-          <h2 className="font-h2-desktop text-h2-desktop text-primary">
-            Comprehensive B2B Services
-          </h2>
-        </div>
-        <div className="max-w-container-max mx-auto px-gutter grid grid-cols-2 lg:grid-cols-4 gap-md">
-          {[
-            {
-              icon: "airport_shuttle",
-              title: "Transfers",
-              desc: "Luxury fleet with professional, English-speaking chauffeurs.",
-            },
-            {
-              icon: "apartment",
-              title: "Hotels",
-              desc: "Exclusive contracts with Kerala's top 5-star & boutique properties.",
-            },
-            {
-              icon: "sailing",
-              title: "Houseboats",
-              desc: "Premium and Ultra-luxury houseboats with gourmet dining.",
-            },
-            {
-              icon: "landscape",
-              title: "Sightseeing",
-              desc: "Curated, off-beat experiences designed for luxury travelers.",
-            },
-          ].map((service) => (
-            <div
-              key={service.title}
-              className="bg-surface-container-lowest p-lg rounded-xl luxury-shadow flex flex-col items-center text-center transition-transform hover:-translate-y-2"
-            >
-              <span className="material-symbols-outlined text-primary text-5xl mb-md">
-                {service.icon}
-              </span>
-              <h4 className="font-h3-desktop text-h3-desktop text-primary mb-sm">
-                {service.title}
-              </h4>
-              <p className="font-body-md text-on-surface-variant">
-                {service.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Why Choose Us */}
       <section className="py-xl max-w-container-max mx-auto px-gutter">
+        <div className="text-center mb-lg">
+          <span className="font-label-caps text-label-caps text-secondary uppercase mb-xs block">
+            Why Guardians Holiday
+          </span>
+          <h2 className="font-h2-desktop text-h2-desktop text-primary">
+            Built on Trust, Driven by Excellence
+          </h2>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-xl">
           {[
             {
               icon: "verified",
-              title: "Unwavering Trust",
-              desc: "With years of local presence, we are the trusted ground partner for hundreds of agencies worldwide, ensuring your clients are always in safe hands.",
+              title: "Unmatched Expertise",
+              desc: "Driven by 20+ years of corporate strategy and industry insight. Our founder's experience ensures every booking is handled with precision.",
             },
             {
               icon: "workspace_premium",
-              title: "Decades of Experience",
-              desc: "Our founders are Kerala travel veterans. We know the roads, the people, and the hidden gems that make an itinerary truly exceptional.",
+              title: "End-to-End Execution",
+              desc: "From the moment you conceptualize a trip to the day your clients return, we manage every single variable with absolute precision.",
             },
             {
               icon: "support_agent",
-              title: "Full-Service Management",
-              desc: "From the moment your client arrives until they depart, we manage every detail. You handle the booking; we handle the magic.",
+              title: "Local Support, Global Standards",
+              desc: "Uncompromising quality control, competitive B2B pricing, and 24/7 on-ground assistance across all destinations.",
             },
           ].map((item) => (
             <div key={item.title} className="flex flex-col gap-sm">
@@ -244,7 +304,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Inquiry Banner */}
+      {/* CTA Banner */}
       <section className="py-xl">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="bg-primary rounded-xl p-xl flex flex-col md:flex-row items-center justify-between gap-lg relative overflow-hidden">
@@ -253,22 +313,26 @@ export default function HomePage() {
             </div>
             <div className="relative z-10 text-center md:text-left">
               <h2 className="font-h2-desktop text-h2-desktop text-on-primary mb-sm">
-                Ready to Elevate Your Kerala Bookings?
+                Ready to Partner with Us?
               </h2>
               <p className="font-body-lg text-body-lg text-on-primary/80">
-                Get exclusive agent rates and priority support today.
+                Get exclusive B2B rates and priority support today.
               </p>
             </div>
             <div className="relative z-10 flex flex-col sm:flex-row gap-md">
               <Link
-                href="/login"
+                href="/contact"
                 className="bg-secondary-fixed text-on-secondary-fixed font-button text-button px-lg py-md rounded-full shadow-lg hover:bg-secondary transition-all hover:text-on-primary"
               >
-                Join Agent Portal
+                Get in Touch
               </Link>
-              <button className="bg-transparent border border-on-primary/30 text-on-primary font-button text-button px-lg py-md rounded-full hover:bg-on-primary/10 transition-all">
-                Download Brochure
-              </button>
+              <a
+                href={`tel:${COMPANY.PHONE}`}
+                className="bg-transparent border border-on-primary/30 text-on-primary font-button text-button px-lg py-md rounded-full hover:bg-on-primary/10 transition-all flex items-center gap-sm"
+              >
+                <span className="material-symbols-outlined">call</span>
+                {COMPANY.PHONE}
+              </a>
             </div>
           </div>
         </div>

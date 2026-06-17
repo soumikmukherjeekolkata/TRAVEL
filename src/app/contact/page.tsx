@@ -1,6 +1,6 @@
 "use client";
 
-import { IMAGES } from "@/lib/constants";
+import { COMPANY } from "@/lib/constants";
 
 export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -27,7 +27,6 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Hero Header */}
       <header className="max-w-container-max mx-auto px-gutter pt-xl pb-lg text-center">
         <p className="font-label-caps text-label-caps text-secondary mb-base">PARTNERSHIP ENQUIRIES</p>
         <h1 className="font-h1-desktop text-h1-desktop text-primary max-w-2xl mx-auto">
@@ -36,12 +35,10 @@ export default function ContactPage() {
         <div className="w-24 h-px bg-secondary-fixed mx-auto mt-md" />
       </header>
 
-      {/* Two Column Content */}
       <section className="max-w-container-max mx-auto px-gutter pb-xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-xl">
-          {/* Form */}
           <div className="lg:col-span-7 bg-surface-container-lowest rounded-xl p-md md:p-lg luxury-shadow border-t-2 border-secondary">
-            <h2 className="font-h3-desktop text-h3-desktop text-primary mb-md">Agent Enquiry Form</h2>
+            <h2 className="font-h3-desktop text-h3-desktop text-primary mb-md">Partner Enquiry Form</h2>
             <form onSubmit={handleSubmit} className="space-y-md">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
                 <div className="space-y-xs">
@@ -83,7 +80,7 @@ export default function ContactPage() {
                 <label className="font-label-caps text-label-caps text-on-surface-variant">MESSAGE</label>
                 <textarea
                   className="w-full bg-background border border-primary/20 rounded-xl px-md py-sm focus:ring-1 focus:ring-secondary focus:border-secondary-fixed transition-all outline-none resize-none"
-                  placeholder="Tell us about your client's requirements..."
+                  placeholder="Tell us about your requirements..."
                   rows={5}
                 />
               </div>
@@ -96,14 +93,13 @@ export default function ContactPage() {
             </form>
           </div>
 
-          {/* Details */}
           <div className="lg:col-span-5 space-y-lg">
             <div className="space-y-md">
               {[
-                { icon: "call", label: "PHONE", value: "+91 484 234 5678", bg: "bg-primary-fixed", color: "text-primary" },
-                { icon: "chat", label: "WHATSAPP", value: "+91 98950 00000", bg: "bg-secondary-fixed", color: "text-secondary" },
-                { icon: "mail", label: "EMAIL", value: "partners@guardiansholiday.com", bg: "bg-primary-fixed", color: "text-primary" },
-                { icon: "location_on", label: "KERALA OFFICE", value: "Suite 402, Marine Drive Tower,\nKochi, Kerala 682031, India", bg: "bg-surface-container-high", color: "text-on-surface-variant" },
+                { icon: "call", label: "PHONE", value: COMPANY.PHONE, bg: "bg-primary-fixed", color: "text-primary" },
+                { icon: "chat", label: "WHATSAPP", value: COMPANY.WHATSAPP, bg: "bg-secondary-fixed", color: "text-secondary" },
+                { icon: "mail", label: "EMAIL", value: COMPANY.EMAIL, bg: "bg-primary-fixed", color: "text-primary" },
+                { icon: "location_on", label: "HEAD OFFICE", value: "Kolkata, West Bengal, India", bg: "bg-surface-container-high", color: "text-on-surface-variant" },
               ].map((item) => (
                 <div key={item.label} className="flex items-start gap-md">
                   <div className={`${item.bg} p-sm rounded-lg ${item.color}`}>
@@ -117,55 +113,49 @@ export default function ContactPage() {
               ))}
             </div>
 
-            {/* Map */}
-            <div className="relative w-full aspect-video bg-surface-container rounded-xl overflow-hidden border-2 border-secondary/20 shadow-inner group">
-              <div className="absolute inset-0 bg-secondary/5 group-hover:bg-transparent transition-colors duration-500" />
-              <img
-                className="w-full h-full object-cover"
-                src={IMAGES.CONTACT_MAP}
-                alt="Map of Kochi, Kerala"
-              />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="w-8 h-8 bg-secondary rounded-full animate-ping absolute opacity-50" />
-                <span
-                  className="material-symbols-outlined text-secondary text-3xl relative z-10"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
+            <div className="bg-primary text-on-primary p-md rounded-xl shadow-lg">
+              <h3 className="font-h3-desktop text-h3-desktop mb-sm">Prefer to talk?</h3>
+              <p className="font-body-md text-on-primary/80 mb-md">
+                Call or WhatsApp us directly for immediate assistance.
+              </p>
+              <div className="space-y-sm">
+                <a
+                  href={`tel:${COMPANY.PHONE}`}
+                  className="flex items-center gap-sm bg-secondary-fixed text-on-secondary-fixed px-lg py-sm rounded-full hover:brightness-105 transition-all font-button text-button"
                 >
-                  location_on
-                </span>
-              </div>
-              <div className="absolute bottom-sm left-sm bg-white/90 backdrop-blur px-sm py-xs rounded-lg text-label-caps text-primary shadow-sm">
-                OFFICE LOCATION
+                  <span className="material-symbols-outlined">call</span>
+                  {COMPANY.PHONE}
+                </a>
+                <a
+                  href={`https://wa.me/${COMPANY.WHATSAPP.replace(/\s/g, "")}`}
+                  className="flex items-center gap-sm bg-[#2D6A4F] text-white px-lg py-sm rounded-full hover:brightness-110 transition-all font-button text-button"
+                >
+                  <span className="material-symbols-outlined">chat</span>
+                  WhatsApp Us
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Bottom Banner */}
       <section className="bg-primary py-xl text-on-primary relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-fixed-dim via-transparent to-transparent" />
         <div className="max-w-container-max mx-auto px-gutter relative z-10 text-center">
-          <h2 className="font-h2-desktop text-h2-desktop mb-lg">Prefer to talk? Call us directly</h2>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-md">
-            <a
-              className="flex items-center gap-sm bg-[#2D6A4F] text-white px-xl py-md rounded-full hover:brightness-110 transition-all shadow-xl font-button text-button group"
-              href="tel:+914842345678"
-            >
-              <span className="material-symbols-outlined">call</span>
-              CALL NOW
-            </a>
-            <a
-              className="flex items-center gap-sm bg-secondary-fixed text-on-secondary-fixed px-xl py-md rounded-full hover:brightness-105 transition-all shadow-xl font-button text-button group"
-              href="https://wa.me/919895000000"
-            >
-              <span className="material-symbols-outlined">message</span>
-              WHATSAPP SUPPORT
-            </a>
-          </div>
-          <p className="mt-lg text-on-primary-container font-body-md opacity-80">
-            Available Mon-Sat, 09:00 AM - 06:00 PM IST
+          <h2 className="font-h2-desktop text-h2-desktop mb-lg">
+            Let&apos;s Build a Lasting Partnership
+          </h2>
+          <p className="font-body-lg text-body-lg text-on-primary/80 max-w-2xl mx-auto mb-lg">
+            We would love the opportunity to collaborate with you, manage your travel
+            portfolios, or discuss a potential vendor partnership.
           </p>
+          <a
+            href={`mailto:${COMPANY.EMAIL}`}
+            className="inline-flex items-center gap-sm bg-secondary-fixed text-on-secondary-fixed px-xl py-md rounded-full hover:brightness-105 transition-all shadow-xl font-button text-button"
+          >
+            <span className="material-symbols-outlined">mail</span>
+            Email Us at {COMPANY.EMAIL}
+          </a>
         </div>
       </section>
     </>
