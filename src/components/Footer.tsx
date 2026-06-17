@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="flex items-center gap-xs mb-md">
             <img
               alt="Logo"
-              className="h-10 w-auto brightness-0 invert"
+              className="h-10 w-auto"
               src="/Logo.jpeg"
             />
             <span className="font-h3-desktop text-h3-desktop text-surface-container-lowest">
