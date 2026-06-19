@@ -5,7 +5,7 @@ export default function ItinerariesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[280px] md:h-[400px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             className="w-full h-full object-cover"
@@ -15,7 +15,7 @@ export default function ItinerariesPage() {
           <div className="absolute inset-0 bg-primary/40 mix-blend-multiply" />
         </div>
         <div className="relative z-10 text-center px-gutter">
-          <h1 className="font-h1-desktop text-h1-desktop text-surface-container-lowest mb-sm drop-shadow-lg">
+          <h1 className="font-h1-mobile text-h1-mobile md:font-h1-desktop md:text-h1-desktop text-surface-container-lowest mb-sm drop-shadow-lg">
             Explore Kerala &mdash; Curated Itineraries
           </h1>
           <p className="font-body-lg text-body-lg text-surface-container-lowest/90 max-w-2xl mx-auto">
@@ -26,7 +26,7 @@ export default function ItinerariesPage() {
       </section>
 
       {/* Filter Bar */}
-      <section className="bg-surface-container-lowest py-md border-b border-outline-variant/30 sticky top-20 z-40 shadow-sm">
+      <section className="bg-surface-container-lowest py-md border-b border-outline-variant/30 sticky top-16 md:top-20 z-40 shadow-sm">
         <div className="max-w-container-max mx-auto px-gutter flex flex-wrap items-center gap-md">
           <div className="flex items-center gap-sm">
             <span className="material-symbols-outlined text-primary">filter_list</span>
@@ -49,14 +49,14 @@ export default function ItinerariesPage() {
       </section>
 
       {/* Grid */}
-      <section className="max-w-container-max mx-auto px-gutter py-xl">
+      <section className="max-w-container-max mx-auto px-gutter py-lg md:py-xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
           {ITINERARIES.map((item) => (
             <article
               key={item.id}
               className="bg-surface-container-lowest rounded-xl luxury-shadow border-t-2 border-secondary overflow-hidden flex flex-col group transition-transform hover:-translate-y-1"
             >
-              <div className="relative h-64 overflow-hidden">
+              <div className="relative h-48 md:h-64 overflow-hidden">
                 <img
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   src={item.image}
@@ -67,7 +67,7 @@ export default function ItinerariesPage() {
                 </div>
               </div>
               <div className="p-md flex-grow flex flex-col">
-                <h3 className="font-h3-desktop text-h3-desktop text-primary mb-sm">{item.title}</h3>
+                <h3 className="font-h3-mobile text-h3-mobile md:font-h3-desktop md:text-h3-desktop text-primary mb-sm">{item.title}</h3>
                 <ul className="space-y-xs mb-md flex-grow">
                   {item.highlights.map((h) => (
                     <li key={h} className="flex items-center gap-xs text-on-surface-variant font-body-md">
@@ -89,9 +89,9 @@ export default function ItinerariesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary py-xl text-center relative overflow-hidden">
+      <section className="bg-primary py-lg md:py-xl text-center relative overflow-hidden">
         <div className="relative z-10 max-w-2xl mx-auto px-gutter">
-          <h2 className="font-h2-desktop text-h2-desktop text-on-primary mb-md">
+          <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-on-primary mb-md">
             Tailor-Made Luxury for Your Clients
           </h2>
           <p className="font-body-lg text-body-lg text-on-primary/80 mb-lg">

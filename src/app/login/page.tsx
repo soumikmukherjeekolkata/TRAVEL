@@ -20,16 +20,16 @@ export default function LoginPage() {
 
       {/* Login Card */}
       <section className="relative z-20 w-full max-w-[480px]">
-        <div className="bg-background/95 backdrop-blur-[12px] p-xl md:p-lg rounded-xl shadow-[0_4px_24px_rgba(27,67,50,0.15)] border border-secondary/20 flex flex-col items-center text-center">
+        <div className="bg-background/95 backdrop-blur-[12px] p-lg md:p-xl rounded-xl shadow-[0_4px_24px_rgba(27,67,50,0.15)] border border-secondary/20 flex flex-col items-center text-center">
           <div className="mb-lg">
             <img
               alt="Guardian Holidays Logo"
-              className="h-24 w-auto object-contain"
+              className="h-16 md:h-24 w-auto object-contain"
               src={IMAGES.LOGO}
             />
           </div>
 
-          <h1 className="font-h2-desktop text-h2-desktop text-primary mb-sm">
+          <h1 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary mb-sm">
             Welcome Back, Travel Partner
           </h1>
           <p className="font-body-md text-on-surface-variant mb-lg max-w-[320px]">

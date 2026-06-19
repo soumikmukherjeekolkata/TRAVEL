@@ -53,6 +53,8 @@
   --font-h2-desktop: var(--font-playfair), "Playfair Display", serif;
   --font-h3-desktop: var(--font-playfair), "Playfair Display", serif;
   --font-h1-mobile: var(--font-playfair), "Playfair Display", serif;
+  --font-h2-mobile: var(--font-playfair), "Playfair Display", serif;
+  --font-h3-mobile: var(--font-playfair), "Playfair Display", serif;
   --font-body-lg: var(--font-dm-sans), "DM Sans", sans-serif;
   --font-body-md: var(--font-dm-sans), "DM Sans", sans-serif;
   --font-button: var(--font-dm-sans), "DM Sans", sans-serif;
@@ -71,9 +73,21 @@
   --text-h2-desktop--line-height: 1.3;
   --text-h2-desktop--font-weight: 600;
 
+  --text-h2-mobile: 28px;
+  --text-h2-mobile--line-height: 1.3;
+  --text-h2-mobile--font-weight: 600;
+
+  --text-h3-desktop: 24px;
+  --text-h2-desktop--line-height: 1.3;
+  --text-h2-desktop--font-weight: 600;
+
   --text-h3-desktop: 24px;
   --text-h3-desktop--line-height: 1.4;
   --text-h3-desktop--font-weight: 600;
+
+  --text-h3-mobile: 20px;
+  --text-h3-mobile--line-height: 1.4;
+  --text-h3-mobile--font-weight: 600;
 
   --text-body-lg: 18px;
   --text-body-lg--line-height: 1.6;

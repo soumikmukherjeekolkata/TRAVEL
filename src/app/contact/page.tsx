@@ -27,18 +27,18 @@ export default function ContactPage() {
 
   return (
     <>
-      <header className="max-w-container-max mx-auto px-gutter pt-xl pb-lg text-center">
+      <header className="max-w-container-max mx-auto px-gutter pt-lg md:pt-xl pb-md md:pb-lg text-center">
         <p className="font-label-caps text-label-caps text-secondary mb-base">PARTNERSHIP ENQUIRIES</p>
-        <h1 className="font-h1-desktop text-h1-desktop text-primary max-w-2xl mx-auto">
+        <h1 className="font-h1-mobile text-h1-mobile md:font-h1-desktop md:text-h1-desktop text-primary max-w-2xl mx-auto">
           Get In Touch &mdash; We&apos;re Here to Help
         </h1>
         <div className="w-24 h-px bg-secondary-fixed mx-auto mt-md" />
       </header>
 
-      <section className="max-w-container-max mx-auto px-gutter pb-xl">
+      <section className="max-w-container-max mx-auto px-gutter pb-lg md:pb-xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-xl">
           <div className="lg:col-span-7 bg-surface-container-lowest rounded-xl p-md md:p-lg luxury-shadow border-t-2 border-secondary">
-            <h2 className="font-h3-desktop text-h3-desktop text-primary mb-md">Partner Enquiry Form</h2>
+            <h2 className="font-h3-mobile text-h3-mobile md:font-h3-desktop md:text-h3-desktop text-primary mb-md">Partner Enquiry Form</h2>
             <form onSubmit={handleSubmit} className="space-y-md">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
                 <div className="space-y-xs">
@@ -139,10 +139,10 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-primary py-xl text-on-primary relative overflow-hidden">
+      <section className="bg-primary py-lg md:py-xl text-on-primary relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-fixed-dim via-transparent to-transparent" />
         <div className="max-w-container-max mx-auto px-gutter relative z-10 text-center">
-          <h2 className="font-h2-desktop text-h2-desktop mb-lg">
+          <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop mb-lg">
             Let&apos;s Build a Lasting Partnership
           </h2>
           <p className="font-body-lg text-body-lg text-on-primary/80 max-w-2xl mx-auto mb-lg">

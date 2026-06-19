@@ -5,7 +5,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <header className="relative h-[450px] flex items-center justify-center overflow-hidden">
+      <header className="relative h-[300px] md:h-[450px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-primary/40 z-10" />
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"
@@ -15,7 +15,7 @@ export default function ServicesPage() {
           <span className="text-secondary-fixed font-label-caps uppercase tracking-widest mb-sm block">
             Full-Service DMC & Travel Solutions
           </span>
-          <h1 className="font-h1-desktop text-h1-desktop text-surface-container-lowest mb-md drop-shadow-lg">
+          <h1 className="font-h1-mobile text-h1-mobile md:font-h1-desktop md:text-h1-desktop text-surface-container-lowest mb-md drop-shadow-lg">
             Comprehensive Travel Services
           </h1>
           <p className="font-body-lg text-body-lg text-surface-container-lowest/90 max-w-2xl mx-auto">
@@ -26,13 +26,13 @@ export default function ServicesPage() {
       </header>
 
       {/* Core Services */}
-      <section className="py-xl">
+      <section className="py-lg md:py-xl">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="text-center mb-lg">
+          <div className="text-center mb-md md:mb-lg">
             <span className="font-label-caps text-label-caps text-secondary uppercase mb-xs block">
               End-to-End Solutions
             </span>
-            <h2 className="font-h2-desktop text-h2-desktop text-primary">
+            <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary">
               Core Travel Services
             </h2>
           </div>
@@ -48,7 +48,7 @@ export default function ServicesPage() {
                       {service.icon}
                     </span>
                   </div>
-                  <h3 className="font-h3-desktop text-h3-desktop text-primary mb-sm">{service.title}</h3>
+                  <h3 className="font-h3-mobile text-h3-mobile md:font-h3-desktop md:text-h3-desktop text-primary mb-sm">{service.title}</h3>
                   <p className="text-on-surface-variant font-body-md mb-lg">{service.description}</p>
                 </div>
               </div>
@@ -58,13 +58,13 @@ export default function ServicesPage() {
       </section>
 
       {/* DMC Expertise */}
-      <section className="py-xl bg-surface-container-low">
+      <section className="py-lg md:py-xl bg-surface-container-low">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center mb-lg">
             <span className="font-label-caps text-label-caps text-secondary uppercase mb-xs block">
               Destination Management
             </span>
-            <h2 className="font-h2-desktop text-h2-desktop text-primary">
+            <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary">
               Specialized DMC Expertise
             </h2>
             <p className="font-body-md text-on-surface-variant mt-sm max-w-2xl mx-auto">
@@ -83,7 +83,7 @@ export default function ServicesPage() {
                       {service.icon}
                     </span>
                   </div>
-                  <h3 className="font-h3-desktop text-h3-desktop text-primary mb-sm">{service.title}</h3>
+                  <h3 className="font-h3-mobile text-h3-mobile md:font-h3-desktop md:text-h3-desktop text-primary mb-sm">{service.title}</h3>
                   <p className="text-on-surface-variant font-body-md mb-lg">{service.description}</p>
                 </div>
               </div>
@@ -93,8 +93,8 @@ export default function ServicesPage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-xl max-w-container-max mx-auto px-gutter">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+      <section className="py-lg md:py-xl max-w-container-max mx-auto px-gutter">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-lg lg:gap-xl items-center">
           <div className="relative">
             <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
               <img
@@ -109,7 +109,7 @@ export default function ServicesPage() {
             </div>
           </div>
           <div>
-            <h2 className="font-h2-desktop text-h2-desktop text-primary mb-md">
+            <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary mb-md">
               Reliability You Can Build Your Business On
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-lg">

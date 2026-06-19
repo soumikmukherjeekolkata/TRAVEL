@@ -10,7 +10,7 @@ export const COMPANY = {
 } as const;
 
 export const IMAGES = {
-  LOGO: "/Logo.jpeg",
+  LOGO: "/logo.png",
   HERO_BG:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuCSQ1mo2yWR459ZjNxP8kxm_9z7hhCNwXT1XJCbqmEudtfnzWX10lC6GnjS7RVnojCLjsHOH7lccwk2vH_dHVSYzRsl0CQQ79v1aXaEQ019C-_zznppBzOvdc7TXwjKdOtRaMIwrTy7JO0E_ySKB1gdpcPXVI9qRv4Pevv-Ar0wGynf5wkl7vhdBrZbLRiRHhIZ7vRJcIV6AE0zEqAWf6kaRheNrxjgaxtUtHqloktyfAbDq1M9X7tVSq9FBS1ovbPt3IPXrk_R1l36",
   MUNNAR:

@@ -30,12 +30,12 @@ export default function Navbar() {
         scrolled ? "shadow-md" : ""
       }`}
     >
-      <div className="max-w-container-max mx-auto px-gutter h-20 flex items-center justify-between">
+      <div className="max-w-container-max mx-auto px-gutter h-16 md:h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-sm">
           <img
             alt={`${COMPANY.NAME} Logo`}
             className="h-12 w-auto"
-            src="/Logo.jpeg"
+            src="/logo.png"
           />
           <span className="font-h3-desktop text-h3-desktop text-primary tracking-tight hidden lg:block">
             {COMPANY.NAME}

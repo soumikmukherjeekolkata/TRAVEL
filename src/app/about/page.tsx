@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <header className="relative h-[450px] flex items-center justify-center overflow-hidden">
+      <header className="relative h-[300px] md:h-[450px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-primary/40 z-10" />
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"
@@ -15,7 +15,7 @@ export default function AboutPage() {
           <span className="text-secondary-fixed font-label-caps uppercase tracking-widest mb-sm block">
             Our Story
           </span>
-          <h1 className="font-h1-desktop text-h1-desktop text-surface-container-lowest mb-md drop-shadow-lg">
+          <h1 className="font-h1-mobile text-h1-mobile md:font-h1-desktop md:text-h1-desktop text-surface-container-lowest mb-md drop-shadow-lg">
             About {COMPANY.NAME}
           </h1>
           <p className="font-body-lg text-body-lg text-surface-container-lowest/90 max-w-2xl mx-auto">
@@ -26,10 +26,10 @@ export default function AboutPage() {
       </header>
 
       {/* Mission & Vision */}
-      <section className="py-xl max-w-container-max mx-auto px-gutter">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+      <section className="py-lg md:py-xl max-w-container-max mx-auto px-gutter">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-lg lg:gap-xl items-center">
           <div>
-            <h2 className="font-h2-desktop text-h2-desktop text-primary mb-md">
+            <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary mb-md">
               Who We Are
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-lg">
@@ -47,14 +47,14 @@ export default function AboutPage() {
             </p>
             <div className="grid grid-cols-2 gap-md mt-lg">
               <div className="bg-surface-container-lowest p-md rounded-xl luxury-shadow border-l-4 border-secondary">
-                <h3 className="font-h3-desktop text-h3-desktop text-primary mb-xs">Our Mission</h3>
+                <h3 className="font-h3-mobile text-h3-mobile md:font-h3-desktop md:text-h3-desktop text-primary mb-xs">Our Mission</h3>
                 <p className="font-body-md text-on-surface-variant">
                   To perform and deliver excellent quality service with competitive rates
                   and build longstanding partnerships with our business partners.
                 </p>
               </div>
               <div className="bg-surface-container-lowest p-md rounded-xl luxury-shadow border-l-4 border-primary">
-                <h3 className="font-h3-desktop text-h3-desktop text-primary mb-xs">Our Vision</h3>
+                <h3 className="font-h3-mobile text-h3-mobile md:font-h3-desktop md:text-h3-desktop text-primary mb-xs">Our Vision</h3>
                 <p className="font-body-md text-on-surface-variant">
                   To earn the reputation as &ldquo;Your Preferred Travel Agency&rdquo;
                   through unwavering commitment to service excellence.
@@ -79,12 +79,12 @@ export default function AboutPage() {
       </section>
 
       {/* What We Do */}
-      <section className="bg-surface-container-low py-xl">
+      <section className="bg-surface-container-low py-lg md:py-xl">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center mb-lg">
-            <h2 className="font-h2-desktop text-h2-desktop text-primary">What We Do</h2>
+            <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary">What We Do</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-md">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-md md:gap-lg">
             {[
               {
                 title: "Sell & Manage Travel",
@@ -103,7 +103,7 @@ export default function AboutPage() {
                 key={item.title}
                 className="bg-surface-container-lowest p-lg rounded-xl luxury-shadow border-t-2 border-secondary/30"
               >
-                <h3 className="font-h3-desktop text-h3-desktop text-primary mb-sm">{item.title}</h3>
+                <h3 className="font-h3-mobile text-h3-mobile md:font-h3-desktop md:text-h3-desktop text-primary mb-sm">{item.title}</h3>
                 <p className="font-body-md text-on-surface-variant">{item.desc}</p>
               </div>
             ))}
@@ -112,28 +112,21 @@ export default function AboutPage() {
       </section>
 
       {/* Founder */}
-      <section className="py-xl max-w-container-max mx-auto px-gutter">
-        <div className="text-center mb-lg">
+      <section className="py-lg md:py-xl max-w-container-max mx-auto px-gutter">
+        <div className="text-center mb-md md:mb-lg">
           <span className="font-label-caps text-label-caps text-secondary uppercase mb-xs block">
             Leadership
           </span>
-          <h2 className="font-h2-desktop text-h2-desktop text-primary">Meet Our Founder</h2>
+          <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary">Meet Our Founder</h2>
         </div>
         <div className="max-w-3xl mx-auto">
           {TEAM.map((member) => (
             <div
               key={member.name}
-              className="bg-surface-container-lowest rounded-xl luxury-shadow overflow-hidden border-t-2 border-secondary flex flex-col md:flex-row"
+              className="bg-surface-container-lowest rounded-xl luxury-shadow overflow-hidden border-t-2 border-secondary p-lg"
             >
-              <div className="md:w-80 h-80 md:h-auto overflow-hidden bg-primary/5">
-                <img
-                  className="w-full h-full object-cover"
-                  src={member.image}
-                  alt={member.name}
-                />
-              </div>
-              <div className="p-lg flex flex-col justify-center">
-                <h3 className="font-h2-desktop text-h2-desktop text-primary mb-xs">{member.name}</h3>
+              <div className="flex flex-col items-start">
+                <h3 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary mb-xs">{member.name}</h3>
                 <p className="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-md">
                   {member.role}
                 </p>
@@ -145,9 +138,9 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary py-xl text-center relative overflow-hidden">
+      <section className="bg-primary py-lg md:py-xl text-center relative overflow-hidden">
         <div className="relative z-10 max-w-2xl mx-auto px-gutter">
-          <h2 className="font-h2-desktop text-h2-desktop text-on-primary mb-md">
+          <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-on-primary mb-md">
             Ready to Start a Partnership?
           </h2>
           <p className="font-body-lg text-body-lg text-on-primary/80 mb-lg">

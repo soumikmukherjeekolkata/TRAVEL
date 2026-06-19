@@ -37,7 +37,7 @@ async function PromiseHandler({ params }: { params: Promise<{ id: string }> }) {
   return (
     <>
       {/* Hero */}
-      <section className="relative h-[70vh] w-full overflow-hidden flex items-end">
+      <section className="relative min-h-[50vh] md:h-[70vh] w-full overflow-hidden flex items-end">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url('${image}')` }}
@@ -48,7 +48,7 @@ async function PromiseHandler({ params }: { params: Promise<{ id: string }> }) {
             <span className="inline-block px-4 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-caps text-label-caps mb-sm">
               B2B EXCLUSIVE
             </span>
-            <h1 className="font-h1-desktop text-h1-desktop text-surface-container-lowest mb-sm">
+            <h1 className="font-h1-mobile text-h1-mobile md:font-h1-desktop md:text-h1-desktop text-surface-container-lowest mb-sm">
               {title}
             </h1>
             <p className="font-body-lg text-body-lg text-surface-container-highest/90 max-w-2xl">
@@ -60,7 +60,7 @@ async function PromiseHandler({ params }: { params: Promise<{ id: string }> }) {
 
       {/* Overview Strip */}
       <section className="bg-surface-container-lowest py-md shadow-sm border-b border-outline-variant/30">
-        <div className="max-w-container-max mx-auto px-gutter flex flex-wrap justify-between gap-md">
+        <div className="max-w-container-max mx-auto px-gutter flex flex-wrap justify-between gap-y-md gap-x-sm md:gap-x-md">
           {[
             { icon: "schedule", label: "Duration", value: duration },
             { icon: "map", label: "Destinations", value: destinations },
@@ -83,13 +83,13 @@ async function PromiseHandler({ params }: { params: Promise<{ id: string }> }) {
       </section>
 
       {/* Main Content */}
-      <section className="max-w-container-max mx-auto px-gutter py-xl">
+      <section className="max-w-container-max mx-auto px-gutter py-lg md:py-xl">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-xl">
           {/* Timeline */}
           <div className="lg:col-span-2">
             {days.length > 0 ? (
               <>
-                <h2 className="font-h2-desktop text-h2-desktop text-primary mb-lg">Expedition Timeline</h2>
+                <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary mb-md md:mb-lg">Expedition Timeline</h2>
                 <div className="space-y-lg relative before:absolute before:left-6 before:top-4 before:bottom-4 before:w-px before:bg-outline-variant/40">
                   {days.map((day, i) => (
                     <div key={i} className="relative pl-16">
@@ -98,7 +98,7 @@ async function PromiseHandler({ params }: { params: Promise<{ id: string }> }) {
                         <span className="font-label-caps text-secondary text-label-caps mb-xs block">
                           {day.day}
                         </span>
-                        <h3 className="font-h3-desktop text-h3-desktop text-primary mb-sm">{day.title}</h3>
+                        <h3 className="font-h3-mobile text-h3-mobile md:font-h3-desktop md:text-h3-desktop text-primary mb-sm">{day.title}</h3>
                         <p className="text-on-surface-variant">{day.description}</p>
                       </div>
                     </div>
@@ -118,7 +118,7 @@ async function PromiseHandler({ params }: { params: Promise<{ id: string }> }) {
           <div className="space-y-lg">
             {/* Gallery */}
             <div>
-              <h2 className="font-h2-desktop text-h2-desktop text-primary mb-md">Visual Journey</h2>
+              <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary mb-md">Visual Journey</h2>
               <div className="grid grid-cols-2 gap-sm">
                 <div
                   className="col-span-2 h-48 rounded-xl bg-cover bg-center overflow-hidden shadow-sm"
@@ -137,7 +137,7 @@ async function PromiseHandler({ params }: { params: Promise<{ id: string }> }) {
 
             {/* Inclusions */}
             <div className="bg-primary text-on-primary p-md rounded-xl shadow-lg">
-              <h3 className="font-h3-desktop text-h3-desktop mb-md">Plan Inclusions</h3>
+              <h3 className="font-h3-mobile text-h3-mobile md:font-h3-desktop md:text-h3-desktop mb-md">Plan Inclusions</h3>
               <ul className="space-y-sm mb-lg">
                 {(includes.length > 0 ? includes : [
                   "Premium Private Houseboat (Alleppey)",
@@ -167,9 +167,9 @@ async function PromiseHandler({ params }: { params: Promise<{ id: string }> }) {
       </section>
 
       {/* CTA */}
-      <section className="bg-surface-container-high py-xl">
+      <section className="bg-surface-container-high py-lg md:py-xl">
         <div className="max-w-container-max mx-auto px-gutter text-center">
-          <h2 className="font-h2-desktop text-h2-desktop text-primary mb-md">Elevate Your Travel Portfolio</h2>
+          <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary mb-md">Elevate Your Travel Portfolio</h2>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-lg">
             Provide your clients with the pinnacle of Kerala&apos;s hospitality. Contact our B2B desk for custom group
             rates and exclusive agent benefits.

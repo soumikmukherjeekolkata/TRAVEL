@@ -4,13 +4,13 @@ import { COMPANY } from "@/lib/constants";
 export default function Footer() {
   return (
     <footer className="bg-primary border-t border-secondary/30">
-      <div className="max-w-container-max mx-auto px-gutter py-xl grid grid-cols-1 md:grid-cols-4 gap-md">
+      <div className="max-w-container-max mx-auto px-gutter py-lg md:py-xl grid grid-cols-1 md:grid-cols-4 gap-y-lg md:gap-y-md gap-x-md">
         <div className="col-span-1 md:col-span-1">
           <div className="flex items-center gap-xs mb-md">
             <img
               alt="Logo"
               className="h-10 w-auto"
-              src="/Logo.jpeg"
+              src="/logo.png"
             />
             <span className="font-h3-desktop text-h3-desktop text-surface-container-lowest">
               {COMPANY.NAME}

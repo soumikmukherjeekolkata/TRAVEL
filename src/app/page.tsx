@@ -1,26 +1,16 @@
 import Link from "next/link";
 import { IMAGES, ITINERARIES, TESTIMONIALS, CORE_SERVICES, COMPANY } from "@/lib/constants";
+import HeroSlideshow from "@/components/HeroSlideshow";
 
 export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <header className="relative h-[85vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            alt="Kerala Backwaters Hero"
-            className="w-full h-full object-cover"
-            src={IMAGES.HERO_BG}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent" />
-        </div>
+      <header className="relative min-h-[70vh] md:h-[85vh] flex items-center overflow-hidden">
+        <HeroSlideshow />
         <div className="relative z-10 max-w-container-max mx-auto px-gutter w-full">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-sm bg-secondary-fixed/20 text-secondary-fixed px-md py-xs rounded-full font-label-caps text-label-caps mb-md backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse" />
-              Your Trusted B2B Travel Partner
-            </span>
-            <h1 className="font-h1-desktop text-h1-desktop text-surface-container-lowest mb-md leading-tight">
+            <h1 className="font-h1-mobile text-h1-mobile md:font-h1-desktop md:text-h1-desktop text-surface-container-lowest mb-md leading-tight">
               Elevate Your Travel Experiences with{" "}
               <span className="text-secondary-fixed">
                 {COMPANY.NAME}
@@ -57,7 +47,7 @@ export default function HomePage() {
       </header>
 
       {/* Stats Strip */}
-      <section className="bg-primary py-lg">
+      <section className="bg-primary py-md md:py-lg">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-md items-center text-center">
             {[
@@ -83,14 +73,14 @@ export default function HomePage() {
       </section>
 
       {/* Core Services */}
-      <section className="py-xl max-w-container-max mx-auto px-gutter">
-        <div className="text-center mb-lg">
+      <section className="py-lg md:py-xl max-w-container-max mx-auto px-gutter">
+        <div className="text-center mb-md md:mb-lg">
           <span className="font-label-caps text-label-caps text-secondary uppercase mb-xs block">
             Comprehensive Solutions
           </span>
-          <h2 className="font-h2-desktop text-h2-desktop text-primary">
-            Everything You Need Under One Roof
-          </h2>
+          <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary">
+              Everything You Need Under One Roof
+            </h2>
           <p className="font-body-md text-on-surface-variant mt-sm max-w-2xl mx-auto">
             From ticketing to destination management, we handle every detail so you can focus on your clients.
           </p>
@@ -104,7 +94,7 @@ export default function HomePage() {
               <span className="material-symbols-outlined text-primary text-4xl mb-md">
                 {service.icon}
               </span>
-              <h4 className="font-h3-desktop text-h3-desktop text-primary mb-sm text-balance">
+              <h4 className="font-h3-mobile text-h3-mobile md:font-h3-desktop md:text-h3-desktop text-primary mb-sm text-balance">
                 {service.title}
               </h4>
               <p className="font-body-md text-on-surface-variant">
@@ -116,14 +106,14 @@ export default function HomePage() {
       </section>
 
       {/* DMC Expertise */}
-      <section className="bg-surface-container-low py-xl">
+      <section className="bg-surface-container-low py-lg md:py-xl">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-lg lg:gap-xl items-center">
             <div>
               <span className="font-label-caps text-label-caps text-secondary uppercase mb-xs block">
                 Destination Management
               </span>
-              <h2 className="font-h2-desktop text-h2-desktop text-primary mb-md">
+              <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary mb-md">
                 Exclusive DMC for Kerala & South India
               </h2>
               <p className="font-body-lg text-body-lg text-on-surface-variant mb-lg">
@@ -176,13 +166,13 @@ export default function HomePage() {
       </section>
 
       {/* Featured Itineraries */}
-      <section className="py-xl max-w-container-max mx-auto px-gutter">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-lg gap-md">
+      <section className="py-lg md:py-xl max-w-container-max mx-auto px-gutter">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-md md:mb-lg gap-md">
           <div>
             <span className="font-label-caps text-label-caps text-secondary uppercase mb-xs block">
               Premium Selections
             </span>
-            <h2 className="font-h2-desktop text-h2-desktop text-primary">
+            <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary">
               Featured Itineraries
             </h2>
           </div>
@@ -202,7 +192,7 @@ export default function HomePage() {
               key={item.id}
               className="bg-surface-container-lowest rounded-xl luxury-shadow overflow-hidden border-t-2 border-secondary group"
             >
-              <div className="h-64 overflow-hidden">
+              <div className="h-48 md:h-64 overflow-hidden">
                 <img
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -210,7 +200,7 @@ export default function HomePage() {
                 />
               </div>
               <div className="p-md">
-                <h3 className="font-h3-desktop text-h3-desktop text-primary mb-sm">
+                <h3 className="font-h3-mobile text-h3-mobile md:font-h3-desktop md:text-h3-desktop text-primary mb-sm">
                   {item.title}
                 </h3>
                 <p className="font-body-md text-on-surface-variant mb-md">
@@ -232,16 +222,16 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-xl max-w-container-max mx-auto px-gutter">
-        <div className="text-center mb-lg">
+      <section className="py-lg md:py-xl max-w-container-max mx-auto px-gutter">
+        <div className="text-center mb-md md:mb-lg">
           <span className="font-label-caps text-label-caps text-secondary uppercase mb-xs block">
             Why Guardian Holidays
           </span>
-          <h2 className="font-h2-desktop text-h2-desktop text-primary">
+          <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary">
             Built on Trust, Driven by Excellence
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-lg md:gap-xl">
           {[
             {
               icon: "verified",
@@ -263,7 +253,7 @@ export default function HomePage() {
               <div className="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
                 <span className="material-symbols-outlined">{item.icon}</span>
               </div>
-              <h3 className="font-h3-desktop text-h3-desktop text-primary">
+              <h3 className="font-h3-mobile text-h3-mobile md:font-h3-desktop md:text-h3-desktop text-primary">
                 {item.title}
               </h3>
               <p className="font-body-md text-on-surface-variant">{item.desc}</p>
@@ -273,9 +263,9 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-primary/5 py-xl">
+      <section className="bg-primary/5 py-lg md:py-xl">
         <div className="max-w-container-max mx-auto px-gutter">
-          <h2 className="font-h2-desktop text-h2-desktop text-primary text-center mb-xl">
+          <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-primary text-center mb-lg md:mb-xl">
             What Our Partners Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-md">
@@ -305,21 +295,21 @@ export default function HomePage() {
       </section>
 
       {/* CTA Banner */}
-      <section className="py-xl">
+      <section className="py-lg md:py-xl">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="bg-primary rounded-xl p-xl flex flex-col md:flex-row items-center justify-between gap-lg relative overflow-hidden">
+          <div className="bg-primary rounded-xl p-lg md:p-xl flex flex-col md:flex-row items-center justify-between gap-md md:gap-lg relative overflow-hidden">
             <div className="absolute inset-0 opacity-10 pointer-events-none">
               <div className="absolute top-0 right-0 w-64 h-64 bg-secondary-fixed rounded-full blur-3xl" />
             </div>
             <div className="relative z-10 text-center md:text-left">
-              <h2 className="font-h2-desktop text-h2-desktop text-on-primary mb-sm">
+              <h2 className="font-h2-mobile text-h2-mobile md:font-h2-desktop md:text-h2-desktop text-on-primary mb-sm">
                 Ready to Partner with Us?
               </h2>
               <p className="font-body-lg text-body-lg text-on-primary/80">
                 Get exclusive B2B rates and priority support today.
               </p>
             </div>
-            <div className="relative z-10 flex flex-col sm:flex-row gap-md">
+            <div className="relative z-10 flex flex-col sm:flex-row gap-sm sm:gap-md w-full sm:w-auto">
               <Link
                 href="/contact"
                 className="bg-secondary-fixed text-on-secondary-fixed font-button text-button px-lg py-md rounded-full shadow-lg hover:bg-secondary transition-all hover:text-on-primary"
